@@ -6,98 +6,94 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
-  <script src="components/jquery-3.3.1.min.js"></script>
-  
+  <script src="components/jquery-3.3.1.min.js"> </script>
+  <script src="components/acao.js"></script>
+
   <link rel="stylesheet" href="components/loader.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body>
-  
-    <div class="container">
-      <h1> Calculadora de Metabolismo</h1>
-       <div class="row">
-         <div class="col-xs-12">
-           <div class="form-group">
-          <label>Digite seu peso: </label>
-         <input type="text" class="form-control"> 
-         </div>
-       </div>
-    </div>
-
-         <div class="row">
-         <div class="col-xs-12">
-           <div class="form-group">
-          <label>Digite sua altura: </label>
-         <input type="text" class="form-control"> 
-         </div>
-       </div>
-    </div>
-    
-
-       <div class="row">
-         <div class="col-xs-12">
-           <div class="form-group">
-          <label>Digite seu idade: </label>
-         <input type="text" class="form-control"> 
-         </div>
-       </div>
-    </div>
-    
+  <div class="container">
 
     <div class="row">
-      <div class="col-xs-6">
-        <div class="form-group">
-          <label>Você é ? </label>
-          <br>
-          <select name="text">
-            <option>-----</option>
-            <option value="1.2">Sedentário</option>
-            <option value="1.375">Levemente ativo</option>
-            <option value="1.55">Moderadamente ativo</option>
-            <option value="1.725">Altamente ativo</option>
-            <option value="1.9">Extremamente ativo</option>
+
+      <div class="col-xs-12">
+        <h1 id="titulo">Calcule seu Metabolismo</h1>
+      </div>
+
+    </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Digite seu Nome:</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Digite sua Altura:</label>
+          <input type="number" step="any" class="form-control" id="alt">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Digite seu peso:</label>
+          <input type="number" step="any" class="form-control" id="peso">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Digite sua idade:</label>
+          <input type="number" class="form-control" id="idade">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Você é:</label>
+          <select class="form-control" id="tipo">
+            <option value="" selected>Selecione</option>
+            <option value="1.2">Sedentário </option>
+            <option value="1.375">Levemente Ativo </option>
+            <option value="1.55">Moderadamente Ativo </option>
+            <option value="1.725">Altamente Ativo </option>
+            <option value="1.9">Extremamente Ativo </option>
           </select>
         </div>
       </div>
-    </div>
-    <br>
-  
-       <div class="row">
-      <div class="col-xs-6">
-        <div class="form-group">
-          <label>Qual é o seu sexo ? </label>
-          <br>
-          <select name="text">
-            <option>-----</option>
-            <option value="H">Homem</option>
-            <option value="M">Mulher</option>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label>Sexo:</label>
+          <select class="form-control" id="sexo">
+            <option value="" selected>Selecione</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
           </select>
         </div>
       </div>
-    </div>
-    <br>
 
-         <div class="row">
-         <div class="col-xs-12">
-           <div class="form-group">
-          <label> resultado: </label>
-         <input type="text" class="form-control" readonly> 
-         </div>
-       </div>
-    </div>
-    
-    <div class="row offiset">
-      <div class="col-xs-6">
-        <div aling="center">
-          <br>
-            <button type="submit" name="button" class="btn btn-warning" id="calc">Calcular</button>
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success btn-block" id="calc">Calcular</div>
         </div>
       </div>
-    </div>
 
-    </div>
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="textfield" class="form-control" id="res" readonly>
+        </div>
+      </div>
+
+  </div>
 </body>
 </html>
-
